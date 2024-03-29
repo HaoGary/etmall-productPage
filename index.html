@@ -1,0 +1,1860 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>商品頁</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <!-- ========== navbar ========== -->
+            <div class="navbar">
+                <ul class="nav-list">
+                    <li class="active">商品</li>
+                    <li>詳情</li>
+                    <li>規格</li>
+                    <li>推薦</li>
+                </ul>
+                <span class="is-icon is-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.48294 7.19494H22.2322C22.7315 7.19494
+                                23.0978 7.67134 22.9767 8.16314L20.9302
+                                16.4748C20.8448 16.8216 20.5379 17.065 20.1857
+                                17.065H7.90698C7.51995 17.065 7.19349 16.7724
+                                7.14549 16.3824L6.128 8.11749L5.22769
+                                4.46091L1.58148 3.53535C1.1703 3.43097 0.9203
+                                3.00791 1.02309 2.59041C1.12589 2.17291 1.54255
+                                1.91908 1.95373 2.02345L6.04665 3.0624C6.32161
+                                3.1322 6.53629 3.35018 6.60503 3.62936L7.48294
+                                7.19494ZM8.58445 15.5066H19.5866L21.2493
+                                8.75337H7.75308L8.58445 15.5066ZM17.6509
+                                21.2258C16.5207 21.2258 15.6044 20.2955 15.6044
+                                19.1479C15.6044 18.0003 16.5207 17.07 17.6509
+                                17.07C18.7811 17.07 19.6974 18.0003 19.6974
+                                19.1479C19.6974 20.2955 18.7811 21.2258 17.6509
+                                21.2258ZM9.46506 21.2258C8.33483 21.2258 7.4186
+                                20.2955 7.4186 19.1479C7.4186 18.0003 8.33483
+                                17.07 9.46506 17.07C10.5953 17.07 11.5115
+                                18.0003 11.5115 19.1479C11.5115 20.2955 10.5953
+                                21.2258 9.46506 21.2258Z" fill="#323232" />
+                    </svg>
+                </span>
+                <span class="is-icon is-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.65748 4.22018C5.25586 3.90214 4.67074
+                                    3.92864 4.29969 4.29969C3.9001 4.69928
+                                    3.9001 5.34714 4.29969 5.74673L10.553
+                                    12L4.29969 18.2533C3.9001 18.6529 3.9001
+                                    19.3007 4.29969 19.7003C4.67074 20.0714
+                                    5.25586 20.0979 5.65748 19.7798L5.74673
+                                    19.7003L12 13.447L18.2533 19.7003L18.3425
+                                    19.7798C18.7441 20.0979 19.3293 20.0714
+                                    19.7003 19.7003C20.0999 19.3007 20.0999
+                                    18.6529 19.7003 18.2533L13.447 12L19.7003
+                                    5.74673C20.0999 5.34714 20.0999 4.69928
+                                    19.7003 4.29969C19.3293 3.92864 18.7441
+                                    3.90214 18.3425 4.22018L18.2533 4.29969L12
+                                    10.553L5.74673 4.29969L5.65748 4.22018Z" fill="#323232" />
+                    </svg>
+                </span>
+            </div>
+            <!-- 找相關 -->
+            <div class="button-right-side">
+                <a class="btn__find-similar" href="javascript:;">
+                    <div class="icon-20 margin-right-xs icon-svg-Icon-similar">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="#323232"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M10.0001 1.6665C10.3015 1.6665 10.5506 1.89051 10.5901 2.18114L10.5955 2.26194V2.4634C14.2957 2.75171 17.2482 5.70418 17.5365 9.40441H17.738C18.0668 9.40441 18.3334 9.67099 18.3334 9.99984C18.3334 10.3013 18.1094 10.5504 17.8188 10.5898L17.738 10.5953H17.5365C17.2482 14.2955 14.2957 17.248 10.5955 17.5363V17.7377C10.5955 18.0666 10.3289 18.3332 10.0001 18.3332C9.69864 18.3332 9.44951 18.1092 9.41009 17.8185L9.40465 17.7377V17.5363C5.70442 17.248 2.75195 14.2955 2.46364 10.5953H2.26218C1.93333 10.5953 1.66675 10.3287 1.66675 9.99984C1.66675 9.69839 1.89075 9.44927 2.18138 9.40984L2.26218 9.40441H2.46364C2.75195 5.70418 5.70442 2.75171 9.40465 2.4634V2.26194C9.40465 1.93309 9.67123 1.6665 10.0001 1.6665ZM3.65887 10.5953H5.35734L5.43814 10.5898C5.72877 10.5504 5.95277 10.3013 5.95277 9.99984C5.95277 9.67099 5.68619 9.40441 5.35734 9.40441H3.65887C3.94093 6.36231 6.36255 3.94068 9.40465 3.65862V5.3571L9.41009 5.43789C9.44951 5.72852 9.69864 5.95253 10.0001 5.95253C10.3289 5.95253 10.5955 5.68594 10.5955 5.3571V3.65862C13.6376 3.94068 16.0592 6.36231 16.3413 9.40441H14.6428L14.562 9.40984C14.2714 9.44927 14.0474 9.69839 14.0474 9.99984C14.0474 10.3287 14.314 10.5953 14.6428 10.5953H16.3413C16.0592 13.6374 13.6376 16.059 10.5955 16.341V14.6426L10.5901 14.5618C10.5506 14.2712 10.3015 14.0471 10.0001 14.0471C9.67123 14.0471 9.40465 14.3137 9.40465 14.6426V16.341C6.36255 16.059 3.94093 13.6374 3.65887 10.5953ZM10.0001 7.85683C8.81653 7.85683 7.85707 8.81628 7.85707 9.99984C7.85707 11.1834 8.81653 12.1428 10.0001 12.1428C11.1836 12.1428 12.1431 11.1834 12.1431 9.99984C12.1431 8.81628 11.1836 7.85683 10.0001 7.85683ZM10.0001 9.04769C10.5259 9.04769 10.9522 9.47398 10.9522 9.99984C10.9522 10.5257 10.5259 10.952 10.0001 10.952C9.47422 10.952 9.04793 10.5257 9.04793 9.99984C9.04793 9.47398 9.47422 9.04769 10.0001 9.04769Z" />
+                        </svg>
+                    </div>
+                    <span>找相關</span>
+                </a>
+            </div>
+            <!-- 配送組裝 -->
+            <div class="button-right-side display-none">
+                <a class="btn__shipping-install" href="javascript:;">
+                    <div class="icon-20 margin-right-xs">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M3.84166 3.27851C3.45386 2.88936 3.52142 2.15897 4.118 1.92588C5.49662 1.38725 7.12473 1.67531 8.23872 2.79316C9.14434 3.70191 9.50187 4.95049 9.31393 6.12654L15.1328 11.9655C15.9264 11.988 16.7173 12.3077 17.3256 12.9181C18.5634 14.1601 18.6025 16.1694 17.3663 17.4056C16.1301 18.6417 14.1244 18.5991 12.8866 17.3571C12.2783 16.7466 11.9605 15.9537 11.9395 15.1587L6.12077 9.3198C4.94639 9.50608 3.70052 9.14578 2.79488 8.237C1.68088 7.11915 1.39613 5.48774 1.93621 4.10767C2.16993 3.51046 2.89917 3.44404 3.28698 3.83319L4.72168 5.27285L5.19682 5.19981L5.27469 4.71649L3.84166 3.27851ZM2.93765 5.26132C2.86485 6.00737 3.11366 6.77821 3.68268 7.3492C4.3552 8.02405 5.30665 8.25138 6.16871 8.02791L6.51613 7.93785L13.2161 14.661L13.1971 14.9453C13.1609 15.485 13.3521 16.0454 13.7744 16.4693C14.5438 17.2413 15.7551 17.2414 16.4802 16.5164C17.2052 15.7913 17.2072 14.5779 16.4378 13.8059C16.0155 13.3821 15.4563 13.1896 14.9176 13.2249L14.6338 13.2435L7.9337 6.52022L8.02419 6.17236C8.24872 5.30922 8.02342 4.35578 7.35092 3.68096C6.7819 3.10997 6.01282 2.8594 5.26793 2.93105L6.31336 3.98009C6.50288 4.17026 6.58979 4.43999 6.54705 4.70529L6.38665 5.70089C6.32882 6.05978 6.04653 6.34039 5.68781 6.39554L4.70223 6.54705C4.43881 6.58755 4.17191 6.49985 3.98364 6.31093L2.93765 5.26132ZM15.8389 14.3646C16.2539 14.781 16.2532 15.4556 15.8375 15.8713C15.4217 16.2871 14.7483 16.2865 14.3334 15.8701C13.9184 15.4538 13.919 14.7792 14.3348 14.3634C14.7505 13.9477 15.4239 13.9482 15.8389 14.3646ZM17.1702 2.78515L17.0342 2.64914C16.9568 2.57171 16.838 2.55377 16.7413 2.60487L15.0508 3.4974C14.8751 3.59014 14.731 3.73322 14.6369 3.90837L14.1754 4.76705L14.1786 4.77021L11.5541 7.40373L12.5714 8.42098L15.1958 5.78746L15.1981 5.78979L16.0544 5.32684C16.2296 5.23214 16.3725 5.0872 16.4649 4.9106L17.3517 3.21511C17.4025 3.11809 17.3843 2.99928 17.307 2.9219L17.1702 2.78515ZM6.70313 12.2715L7.42733 11.5448L8.44458 12.562L7.72037 13.2887L8.31655 13.8849C8.64342 14.2118 8.63818 14.7479 8.30485 15.0824L5.37724 18.0197C5.04391 18.3541 4.50872 18.3603 4.18185 18.0335L1.95373 15.8053C1.62686 15.4785 1.6321 14.9423 1.96543 14.6079L4.89304 11.6706C5.22637 11.3361 5.76156 11.3299 6.08843 11.6568L6.70313 12.2715ZM5.47904 12.8612L3.15498 15.1928L4.79124 16.8291L7.11531 14.4974L5.47904 12.8612Z"
+                                fill="#008474" />
+                        </svg>
+                    </div>
+                    <span>配送組裝諮詢</span>
+                </a>
+            </div>
+            <!-- ========== main ========== -->
+            <div class="product-image-list">
+                <div class="product-image-scroll">
+                    <img src="https://media.etmall.com.tw/nximg/003558/3558901/3558901_xl.jpg?t=18442824011" alt="商品圖"
+                        class="product-image" />
+                    <!-- dot -->
+                    <ul class="slider-dots slider-dots-area">
+                        <li class="slider-active"><button>1</button></li>
+                        <li class=""><button>2</button></li>
+                        <li class=""><button>3</button></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 商品內容 -->
+            <div class="section-top">
+                <!-- 商品資訊 -->
+                <div class="product-top-info padding-sides-md">
+                    <ul class="tag-list margin-bottom-sm">
+                        <li class="promo-tag">
+                            <img src="https://media.etmall.com.tw/Promo/Image/PromoTag/3/51c9862e-9b23-4dbd-8854-23535286a44e.png"
+                                alt="行銷標籤" />
+                        </li>
+                        <li>速</li>
+                        <li>商城</li>
+                    </ul>
+                    <div class="p-subtitle margin-bottom-sm">
+                        商品副標題商品副標題商品副標題商品副標題商品副標題商品副標題
+                    </div>
+                    <h3 class="p-title margin-bottom-sm">
+                        商品主標題商品主標題商品主標題商品主標題商品主標題商品主標題
+                    </h3>
+                    <div class="priceCollection">
+                        <ul class="price-group margin-bottom-xs fz-14">
+                            <li class="d-inline-flex">
+                                <span>市價</span>
+                                <span class="price-deprecated">$59,900</span>
+                            </li>
+                            <li class="d-inline-flex">
+                                <span>員工價</span>
+                                <span>$999</span>
+                            </li>
+                        </ul>
+                        <!-- 網路價 -->
+                        <div>
+                            <div class="price-value d-inline-flex
+                        align-items-center">
+                                <span class="price-color margin-right-sm">網路價</span>
+                                <span class="d-inline-flex
+                            align-items-center margin-right-sm">
+                                    <span class="price-color fz-bold-20">$</span>
+                                    <span class="price-color fz-bold-28">888,888</span>
+                                    <span class="price-color fz-bold-20">-</span>
+                                    <span class="price-color fz-bold-28">999,999</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 其他資訊 -->
+                    <div>
+                        <!-- 新連鎖 -->
+                        <div class="margin-top-sm">
+                            <div class="d-inline-flex">
+                                <span class="icon-20 margin-right-sm">
+                                    <svg width="20" height="20" viewBox="0 0
+                                24
+                                24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2
+                                    5.5C2
+                                    7.29493 3.45507 8.75 5.25
+                                    8.75C6.16946 8.75 6.99975
+                                    8.36818
+                                    7.59094 7.75444L10.9591
+                                    9.74473C10.6636 10.4372 10.5
+                                    11.1995
+                                    10.5 12C10.5 12.8037 10.6649
+                                    13.5688
+                                    10.9627 14.2635L7.6016
+                                    16.2567C7.00974 15.6364
+                                    6.175
+                                    15.25
+                                    5.25 15.25C3.45507 15.25 2
+                                    16.7051 2
+                                    18.5C2 20.2949 3.45507 21.75
+                                    5.25
+                                    21.75C7.04493 21.75 8.5
+                                    20.2949
+                                    8.5
+                                    18.5C8.5 18.1699 8.4508
+                                    17.8514
+                                    8.35933 17.5512L11.7288
+                                    15.5531C12.7817 16.8909
+                                    14.4155
+                                    17.75 16.25 17.75C19.4256
+                                    17.75
+                                    22
+                                    15.1756 22 12C22 8.82436
+                                    19.4256
+                                    6.25 16.25 6.25C14.4123 6.25
+                                    12.7759
+                                    7.11212 11.7233
+                                    8.45397L8.3548
+                                    6.4635C8.44917 6.15906 8.5
+                                    5.83547
+                                    8.5 5.5C8.5 3.70507 7.04493
+                                    2.25
+                                    5.25 2.25C3.45507 2.25 2
+                                    3.70507
+                                    2
+                                    5.5ZM7 5.5C7 6.4665 6.2165
+                                    7.25
+                                    5.25
+                                    7.25C4.2835 7.25 3.5 6.4665
+                                    3.5
+                                    5.5C3.5 4.5335 4.2835 3.75
+                                    5.25
+                                    3.75C6.2165 3.75 7 4.5335 7
+                                    5.5ZM5.25 20.25C6.2165 20.25
+                                    7
+                                    19.4665 7 18.5C7 17.5335
+                                    6.2165
+                                    16.75 5.25 16.75C4.2835
+                                    16.75
+                                    3.5
+                                    17.5335 3.5 18.5C3.5 19.4665
+                                    4.2835
+                                    20.25 5.25 20.25ZM20.5
+                                    12C20.5
+                                    14.3472 18.5972 16.25 16.25
+                                    16.25C13.9028 16.25 12
+                                    14.3472
+                                    12
+                                    12C12 9.65279 13.9028 7.75
+                                    16.25
+                                    7.75C18.5972 7.75 20.5
+                                    9.65279
+                                    20.5
+                                    12ZM16.674
+                                    14.69V14.4253C16.674
+                                    14.4001 16.6811 14.3812
+                                    16.7093
+                                    14.3749C17.5208 14.2363
+                                    18.05
+                                    13.6629 18.05 13.0517C18.05
+                                    12.2262
+                                    17.2032 11.8355 16.7022
+                                    11.615C16.674 11.6024
+                                    16.6599
+                                    11.5772 16.6599
+                                    11.552C16.6599
+                                    11.2986 16.6619 11.0523
+                                    16.6637
+                                    10.8206L16.6637
+                                    10.82L16.6637
+                                    10.8199L16.6637
+                                    10.8199L16.6637
+                                    10.8196C16.6654 10.6136
+                                    16.6669
+                                    10.4191 16.6669
+                                    10.2413C16.6669
+                                    10.2161 16.674 10.2035
+                                    16.6881
+                                    10.2035C16.7163 10.2035
+                                    16.928
+                                    10.2854 17.0762
+                                    10.443C17.1821
+                                    10.5438 17.295 10.5879
+                                    17.3938
+                                    10.5879C17.5984 10.5879
+                                    17.7677
+                                    10.4241 17.7677
+                                    10.2476C17.7677
+                                    10.0019 17.3585 9.68053
+                                    16.7093
+                                    9.57971C16.6881 9.57341
+                                    16.674
+                                    9.56081 16.674
+                                    9.5419V9.28986C16.674
+                                    9.09452 16.5188 9 16.3635
+                                    9C16.1165
+                                    9 16.0248 9.16383 16.0389
+                                    9.33396C16.0389 9.34962
+                                    16.0401
+                                    9.37069 16.0415
+                                    9.39537V9.39539C16.0435
+                                    9.43029
+                                    16.046 9.47241 16.046
+                                    9.5167C16.046
+                                    9.54821 16.0389 9.55451
+                                    16.0036
+                                    9.56081C15.1921 9.64902
+                                    14.7405
+                                    10.172 14.7405
+                                    10.7202C14.7405
+                                    11.1487 15.0228 11.5898
+                                    15.6367
+                                    11.8418C16.0036 11.9868
+                                    16.0601
+                                    12.0246 16.0601
+                                    12.075C16.0601
+                                    12.3796 16.0562 12.6843
+                                    16.0525
+                                    12.9734L16.0525
+                                    12.9734L16.0525
+                                    12.9736C16.0491 13.2346
+                                    16.046
+                                    13.4828 16.046 13.707C16.046
+                                    13.7322
+                                    16.0389 13.7574 16.0107
+                                    13.7574C15.9825 13.7574
+                                    15.5026
+                                    13.6881 15.2274
+                                    13.3415C15.1498
+                                    13.2407 15.044 13.2029
+                                    14.9381
+                                    13.2029C14.7335 13.2029
+                                    14.55
+                                    13.3541 14.55 13.5369C14.55
+                                    13.7385
+                                    14.9381 14.2993 15.9966
+                                    14.3938C16.0305 14.3999
+                                    16.0318
+                                    14.4059 16.0381
+                                    14.4343L16.0389
+                                    14.4379V14.6774C16.0389
+                                    14.8853
+                                    16.2012 14.9925 16.3635
+                                    14.9925C16.5188 14.9925
+                                    16.674
+                                    14.8916 16.674
+                                    14.69ZM16.0601
+                                    10.2035V11.3062C16.0601
+                                    11.3251
+                                    16.0601 11.3314 16.046
+                                    11.3314C16.046 11.3314
+                                    16.0389
+                                    11.3314 16.0319
+                                    11.3251C15.6649
+                                    11.1613 15.4815 10.9408
+                                    15.4815
+                                    10.7013C15.4815 10.2539
+                                    16.0319
+                                    10.1657 16.0319
+                                    10.1657C16.053
+                                    10.1657 16.0601 10.172
+                                    16.0601
+                                    10.2035ZM16.6599
+                                    12.3774V13.6755C16.6599
+                                    13.7007
+                                    16.6669 13.7259 16.6881
+                                    13.7259C16.794 13.7259
+                                    17.2667
+                                    13.4991 17.2667
+                                    13.0706C17.2667
+                                    12.8122 17.0974 12.535
+                                    16.7163
+                                    12.3459C16.7082 12.3435
+                                    16.7012
+                                    12.3411 16.6952
+                                    12.3391C16.6854
+                                    12.3357 16.6784 12.3333
+                                    16.674
+                                    12.3333C16.6599 12.3333
+                                    16.6599
+                                    12.3459 16.6599 12.3774Z" fill="#323232" />
+                                    </svg>
+                                </span>
+                                <span class="fz-regular-20
+                                price-color">PV6.17</span>
+                            </div>
+                        </div>
+                        <!-- 東森幣 -->
+                        <div class="margin-top-sm">
+                            <div class="d-inline-flex
+                            align-items-center">
+                                <span class="icon-20
+                                margin-right-sm">
+                                    <img src="./img/東森幣.png" alt="" />
+                                </span>
+                                <div class="fz-14 d-inline-flex flex-direction-col">
+                                    <div class="d-inline-flex">
+                                        <span>東森幣最高回饋</span>
+                                        <span class="price-color">507</span>
+                                        <span>枚</span>
+                                    </div>
+                                    <div class="d-inline-flex">
+                                        <span>東森幣最高折抵</span>
+                                        <span class="price-color">507</span>
+                                        <span>枚</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 累積點數 -->
+                        <div class="margin-top-sm">
+                            <div class="d-inline-flex
+                            align-items-center">
+                                <span class="icon-20
+                                margin-right-sm">
+                                    <img src="./img/icon1.png" alt="" />
+                                </span>
+                                <div class="fz-14 d-inline-flex">
+                                    <span>最高累積</span>
+                                    <span>2000</span>
+                                    <span>點</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 品號 -->
+                <div class="productNumber list-wrap product-action-bar">
+                    <div class="d-inline-flex align-items-center">
+                        <p class="font-color-gray-600 d-inline-flex">
+                            <span>品號：</span>
+                            982289457
+                        </p>
+                    </div>
+                    <div class="d-inline-flex align-items-center">
+                        <span class="margin-right-sm">
+                            語音訂購專線
+                        </span>
+                        <div class="call-btn">
+                            <div class="icon-20 margin-right-xs">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1609_95656)">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M10.0001 8.69995V10.4999H11.8001C11.8001 9.50544 10.9946 8.69995 10.0001 8.69995ZM10.0001 5.09998V6.89996C11.9855 6.89996 13.6 8.51455 13.6 10.4999H15.4C15.4 7.51735 12.9827 5.09998 10.0001 5.09998ZM10.0001 1.5V3.29998C13.9699 3.29998 17.2 6.53006 17.2 10.4999H19C19 5.52927 14.9707 1.5 10.0001 1.5ZM14.1868 17.9105C14.176 17.9429 14.1769 17.9384 14.1868 17.9105V17.9105ZM11.7929 14.5328C10.5284 14.0171 10.6139 15.5417 9.71118 16.0358C9.12439 16.3571 8.29639 15.7748 7.7843 15.4526C6.88971 14.8892 6.09681 14.1476 5.43802 13.2899C5.10052 12.8516 4.35533 12.0272 4.44713 11.4125C4.59293 10.4369 5.74672 10.3883 5.41642 9.19494C5.24002 8.55594 4.92412 7.92685 4.68742 7.31125C4.37063 6.48596 4.24013 5.95767 3.31584 6.00267C2.64804 6.03507 2.20525 6.32036 1.79485 6.85586C0.68426 8.30215 0.851658 10.2524 1.59775 11.8391C2.65434 14.0846 4.46513 16.2014 6.39921 17.5694C7.715 18.5 9.44838 19.345 11.0414 19.4881C12.2078 19.5934 13.8394 18.9626 14.257 17.6963C14.2282 17.7845 14.2003 17.87 14.1868 17.9105C14.1967 17.879 14.2183 17.8151 14.257 17.6963C14.2993 17.5685 14.32 17.5046 14.3299 17.4758C14.3173 17.5136 14.2885 17.6018 14.2579 17.6936C14.6251 16.5776 14.6701 16.0394 13.7053 15.5201C13.0799 15.1835 12.4472 14.8001 11.7929 14.5328ZM14.3299 17.4757C14.3371 17.4523 14.3371 17.4541 14.3299 17.4757V17.4757Z"
+                                            fill="#323232" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1609_95656">
+                                            <rect width="20" height="20" fill="white" transform="translate(0 0.5)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                            撥打
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 商品規格 圖預覽 -->
+            <div class="section ProductSpecificationPreview">
+                <div class="list-wrap">
+                    <div class="cell-title">
+                        <div class="d-inline-flex margin-right-sm">
+                            <p class="font-color-gray-600">
+                                商品規格
+                            </p>
+                        </div>
+                        <div class="flex-1 d-inline-flex align-items-center">
+                            可選顏色/尺寸
+                        </div>
+                        <div class="icon-20">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M6.84883 3.9338C6.62731 4.15605 6.60771 4.50331 6.78967 4.74768L6.8503 4.81768L12.049 10L6.8503 15.1823C6.62804 15.4038 6.60729 15.751 6.78843 15.996L6.84883 16.0662C7.07034 16.2885 7.41753 16.3092 7.66251 16.1281L7.73271 16.0677L12.9888 10.8291C13.4193 10.4 13.4462 9.7203 13.0695 9.25991L12.9888 9.17089L7.73271 3.93232C7.48822 3.68865 7.0925 3.68931 6.84883 3.9338Z"
+                                    fill="#999999" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-action-bar">
+                    <div class="pd-preview list-wrap">
+                        <p class="text-mode display-none">黑Mx12、黑Lx12、白Mx12、白Lx12、12盒-自行備註顏色數量</p>
+                        <div class="img-preview">
+                            <div class="images-wrap">
+                                <div class="thumbnail">
+                                    <img src="https://media.etmall.com.tw/nximg/003854/3854170/f26171ee-882c-40e9-9419-88597cc215e7.jpg"
+                                        alt="" width="40" height="40">
+                                </div>
+                                <div class="thumbnail">
+                                    <img src="https://media.etmall.com.tw/nximg/003854/3854170/93ab8c43-0002-4460-8a6d-f7c8fbd54ee0.jpg"
+                                        alt="" width="40" height="40">
+                                </div>
+                                <div class="thumbnail">
+                                    <img src="https://media.etmall.com.tw/nximg/003854/3854170/aa719328-dec3-4eb5-92b0-866badd0fb3d.jpg"
+                                        alt="" width="40" height="40">
+                                </div>
+                                <div class="thumbnail">
+                                    <img src="https://media.etmall.com.tw/nximg/003854/3854170/9a5587b4-21f7-4742-8fe5-851f8b90ba12.jpg"
+                                        alt="" width="40" height="40">
+                                </div>
+                                <div class="thumbnail">
+                                    <img src="https://media.etmall.com.tw/nximg/003854/3854170/1f7b8114-946a-4c64-bfd1-4f336eb43a58.jpg"
+                                        alt="" width="40" height="40">
+                                </div>
+                                <div class="thumbnail mask-more">
+                                    <img src="https://media.etmall.com.tw/nximg/003854/3854170/52e8fbd2-88c8-43bf-8bf2-3e8ada121c45.jpg"
+                                        alt="" width="40" height="40">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- 商品規格 文字預覽 -->
+            <div class="section ProductSpecificationPreview">
+                <div class="list-wrap">
+                    <div class="cell-title">
+                        <div class="d-inline-flex margin-right-sm">
+                            <p class="font-color-gray-600">
+                                商品規格
+                            </p>
+                        </div>
+                        <div class="flex-1 d-inline-flex align-items-center">
+                            可選顏色/尺寸
+                        </div>
+                        <div class="icon-20">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M6.84883 3.9338C6.62731 4.15605 6.60771 4.50331 6.78967 4.74768L6.8503 4.81768L12.049 10L6.8503 15.1823C6.62804 15.4038 6.60729 15.751 6.78843 15.996L6.84883 16.0662C7.07034 16.2885 7.41753 16.3092 7.66251 16.1281L7.73271 16.0677L12.9888 10.8291C13.4193 10.4 13.4462 9.7203 13.0695 9.25991L12.9888 9.17089L7.73271 3.93232C7.48822 3.68865 7.0925 3.68931 6.84883 3.9338Z"
+                                    fill="#999999" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-action-bar">
+                    <div class="pd-preview list-wrap">
+                        <p class="text-mode">黑Mx12、黑Lx12、白Mx12、白Lx12、12盒-自行備註顏色數量</p>
+                        <div class="img-preview display-none">
+                            <div class="images-wrap">
+                                <div class="thumbnail">
+                                    <img src="https://media.etmall.com.tw/nximg/003854/3854170/f26171ee-882c-40e9-9419-88597cc215e7.jpg"
+                                        alt="" width="40" height="40">
+                                </div>
+                                <div class="thumbnail">
+                                    <img src="https://media.etmall.com.tw/nximg/003854/3854170/93ab8c43-0002-4460-8a6d-f7c8fbd54ee0.jpg"
+                                        alt="" width="40" height="40">
+                                </div>
+                                <div class="thumbnail">
+                                    <img src="https://media.etmall.com.tw/nximg/003854/3854170/aa719328-dec3-4eb5-92b0-866badd0fb3d.jpg"
+                                        alt="" width="40" height="40">
+                                </div>
+                                <div class="thumbnail">
+                                    <img src="https://media.etmall.com.tw/nximg/003854/3854170/9a5587b4-21f7-4742-8fe5-851f8b90ba12.jpg"
+                                        alt="" width="40" height="40">
+                                </div>
+                                <div class="thumbnail">
+                                    <img src="https://media.etmall.com.tw/nximg/003854/3854170/1f7b8114-946a-4c64-bfd1-4f336eb43a58.jpg"
+                                        alt="" width="40" height="40">
+                                </div>
+                                <div class="thumbnail mask-more">
+                                    <img src="https://media.etmall.com.tw/nximg/003854/3854170/52e8fbd2-88c8-43bf-8bf2-3e8ada121c45.jpg"
+                                        alt="" width="40" height="40">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- 商店資訊 -->
+            <div class="section shopOrder">
+                <div class="list-wrap">
+                    <div class="shop-order-wrap">
+                        <!-- 商店logo 商店名 -->
+                        <div class="d-inline-flex justify-content-center">
+                            <div class="shop__logo">
+                                <img class="shop-order__logo"
+                                    src="https://media.etmall.com.tw/vdo/IM_Store/Logo/0016294/3925e82b-808d-423c-9b99-af8f8809c808.jpeg"
+                                    alt="瘋科技優選">
+                            </div>
+                            <div class="shop-order__details">
+                                <div class="shop-order__tag">
+                                    <i class="icon-svg-Tag-shop-brand"><span>商城</span></i>
+                                </div>
+                                <div class="shop-order__shop-name">瘋科技優選</div>
+                            </div>
+                        </div>
+                        <!-- 標籤按鈕 -->
+                        <div class="shop-order__btns">
+                            <div class="shop-order__btn display-none">關注商店</div>
+                            <div class="shop-order__btn">進店逛逛</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="padding-updown-sm padding-sides-lg shop-order__FAQ-link">
+                    本賣場為商城商品，所有訂單相關、配送、退貨、售後服務等，皆由商城之廠商直接為您服務...
+                    <a class="normal-link" target="_blank" rel="noopener noreferrer" href="javascript:;">(服務說明)</a>
+                </div>
+            </div>
+            <!-- 折價券 -->
+            <div class="section coupon">
+                <div class="list-wrap">
+                    <div class="cell-title">
+                        <div class="d-inline-flex margin-right-sm">
+                            <div class="fz-12 d-inline-flex tag-border-radius tag-border-radius">
+                                <span class="tag-item-single tag-color font-color-gray-100">折價券</span>
+                            </div>
+                        </div>
+                        <div class="flex-1 fz-14 d-inline-flex align-items-center">
+                            查看可適用的折價券/商品券 </div>
+                        <div class="icon-20">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M6.84883 3.9338C6.62731 4.15605 6.60771 4.50331 6.78967 4.74768L6.8503 4.81768L12.049 10L6.8503 15.1823C6.62804 15.4038 6.60729 15.751 6.78843 15.996L6.84883 16.0662C7.07034 16.2885 7.41753 16.3092 7.66251 16.1281L7.73271 16.0677L12.9888 10.8291C13.4193 10.4 13.4462 9.7203 13.0695 9.25991L12.9888 9.17089L7.73271 3.93232C7.48822 3.68865 7.0925 3.68931 6.84883 3.9338Z"
+                                    fill="#999999" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 優惠活動 -->
+            <div class="section multipleCampaign">
+                <div class="list-wrap">
+                    <div class="cell-title">
+                        <div class="d-inline-flex margin-right-sm">
+                            <p class="font-color-gray-600">
+                                優惠活動
+                            </p>
+                        </div>
+                        <div class="text-right">
+                            更多優惠活動
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="pd-preview">
+                        <!-- list -->
+                        <div class="list-wrap-sm">
+                            <div class="cell-title">
+                                <div class="tag d-inline-flex margin-right-sm">
+                                    <div class="fz-12 d-inline-flex tag-border-radius tag-border-radius">
+                                        <span class="tag-item-multiple font-color-secondary">
+                                            滿額
+                                        </span>
+                                        <span class="tag-item-multiple tag-color font-color-gray-100">
+                                            滿件贈
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="fz-14 list-text-area">
+                                    清涼一夏玩全台限時下殺
+                                </div>
+                                <div class="icon-20">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M6.84883 3.9338C6.62731 4.15605 6.60771 4.50331 6.78967 4.74768L6.8503 4.81768L12.049 10L6.8503 15.1823C6.62804 15.4038 6.60729 15.751 6.78843 15.996L6.84883 16.0662C7.07034 16.2885 7.41753 16.3092 7.66251 16.1281L7.73271 16.0677L12.9888 10.8291C13.4193 10.4 13.4462 9.7203 13.0695 9.25991L12.9888 9.17089L7.73271 3.93232C7.48822 3.68865 7.0925 3.68931 6.84883 3.9338Z"
+                                            fill="#999999"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list-wrap-sm">
+                            <div class="cell-title">
+                                <div class="tag d-inline-flex margin-right-sm">
+                                    <div class="fz-12 d-inline-flex tag-border-radius tag-border-radius">
+                                        <span class="tag-item-multiple font-color-secondary">
+                                            滿額
+                                        </span>
+                                        <span class="tag-item-multiple tag-color font-color-gray-100">
+                                            加購
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="fz-14 list-text-area">
+                                    7/15-8/1_清涼一夏玩全台限時下殺∣旅遊滿2萬送500東森幣/或國內旅遊滿6或國內旅遊滿6國內旅遊滿6
+                                </div>
+                                <div class="icon-20">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M6.84883 3.9338C6.62731 4.15605 6.60771 4.50331 6.78967 4.74768L6.8503 4.81768L12.049 10L6.8503 15.1823C6.62804 15.4038 6.60729 15.751 6.78843 15.996L6.84883 16.0662C7.07034 16.2885 7.41753 16.3092 7.66251 16.1281L7.73271 16.0677L12.9888 10.8291C13.4193 10.4 13.4462 9.7203 13.0695 9.25991L12.9888 9.17089L7.73271 3.93232C7.48822 3.68865 7.0925 3.68931 6.84883 3.9338Z"
+                                            fill="#999999"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list-wrap-sm">
+                            <div class="cell-title">
+                                <div class="tag d-inline-flex margin-right-sm">
+                                    <div class="fz-12 d-inline-flex tag-border-radius tag-border-radius">
+                                        <span class="tag-item-single font-color-secondary">活動</span>
+                                    </div>
+                                </div>
+                                <div class="fz-14 list-text-area">
+                                    7/15-8/1_清涼一夏玩全台限時下殺∣旅遊滿2萬送500東森幣/或國內旅遊滿6或國內旅遊滿6國內旅遊滿6
+                                </div>
+                                <div class="icon-20">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M6.84883 3.9338C6.62731 4.15605 6.60771 4.50331 6.78967 4.74768L6.8503 4.81768L12.049 10L6.8503 15.1823C6.62804 15.4038 6.60729 15.751 6.78843 15.996L6.84883 16.0662C7.07034 16.2885 7.41753 16.3092 7.66251 16.1281L7.73271 16.0677L12.9888 10.8291C13.4193 10.4 13.4462 9.7203 13.0695 9.25991L12.9888 9.17089L7.73271 3.93232C7.48822 3.68865 7.0925 3.68931 6.84883 3.9338Z"
+                                            fill="#999999"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 登記活動 -->
+            <div class="section registerCampaign">
+                <div class="list-wrap">
+                    <div class="cell-title">
+                        <div class="d-inline-flex margin-right-sm">
+                            <p class="font-color-gray-600">
+                                登記活動
+                            </p>
+                        </div>
+
+                        <div class="text-right">
+                            更多登記活動
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="pd-preview">
+                        <!-- list -->
+                        <div class="list-wrap-sm">
+                            <div class="cell-title">
+                                <div class="tag d-inline-flex margin-right-sm">
+                                    <div class="fz-12 d-inline-flex tag-border-radius tag-border-radius">
+                                        <span class="tag-item-single font-color-secondary">活動</span>
+                                    </div>
+                                </div>
+                                <div class="fz-14 list-text-area">
+                                    旅遊滿2萬送500東森幣
+                                </div>
+                                <div class="icon-20">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M6.84883 3.9338C6.62731 4.15605 6.60771 4.50331 6.78967 4.74768L6.8503 4.81768L12.049 10L6.8503 15.1823C6.62804 15.4038 6.60729 15.751 6.78843 15.996L6.84883 16.0662C7.07034 16.2885 7.41753 16.3092 7.66251 16.1281L7.73271 16.0677L12.9888 10.8291C13.4193 10.4 13.4462 9.7203 13.0695 9.25991L12.9888 9.17089L7.73271 3.93232C7.48822 3.68865 7.0925 3.68931 6.84883 3.9338Z"
+                                            fill="#999999"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list-wrap-sm">
+                            <div class="cell-title">
+                                <div class="tag d-inline-flex margin-right-sm">
+                                    <div class="fz-12 d-inline-flex tag-border-radius tag-border-radius">
+                                        <span class="tag-item-single font-color-secondary">活動</span>
+                                    </div>
+                                </div>
+                                <div class="fz-14 list-text-area">
+                                    7/15-8/1_清涼一夏玩全台限時下殺∣旅遊滿2萬送500東森幣/或國內旅遊滿6或國內旅遊滿6國內旅遊滿6
+                                </div>
+                                <div class="icon-20">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M6.84883 3.9338C6.62731 4.15605 6.60771 4.50331 6.78967 4.74768L6.8503 4.81768L12.049 10L6.8503 15.1823C6.62804 15.4038 6.60729 15.751 6.78843 15.996L6.84883 16.0662C7.07034 16.2885 7.41753 16.3092 7.66251 16.1281L7.73271 16.0677L12.9888 10.8291C13.4193 10.4 13.4462 9.7203 13.0695 9.25991L12.9888 9.17089L7.73271 3.93232C7.48822 3.68865 7.0925 3.68931 6.84883 3.9338Z"
+                                            fill="#999999"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 銀行活動 -->
+            <div class="section productDetailCrossIndustryBanner">
+                <div class="d-inline-flex width-100">
+                    <img class=""
+                        src="https://media.etmall.com.tw/Promo/Image/Kanban/50/356996/f4450250-d8e0-4aa8-93b2-4f0dda4c78d5.jpg"
+                        alt="星展 10%(至上)+台中15%(至上)" width="100%" height="100%">
+                </div>
+            </div>
+            <!-- 特色活動 -->
+            <div class="section productFeature">
+                <div class="feature__shipment">
+                    <!-- 警告 -->
+                    <div class="list-wrap">
+                        <div class="cell-wrap">
+                            <div class="d-inline-flex margin-right-sm">
+                                <div class="icon-20 warning-color">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M10.0001 18.3333C14.6025 18.3333 18.3334 14.6023 18.3334 9.99996C18.3334 5.39759 14.6025 1.66663 10.0001 1.66663C5.39771 1.66663 1.66675 5.39759 1.66675 9.99996C1.66675 14.6023 5.39771 18.3333 10.0001 18.3333ZM10.0001 17.0833C6.08806 17.0833 2.91675 13.912 2.91675 9.99996C2.91675 6.08794 6.08806 2.91663 10.0001 2.91663C13.9121 2.91663 17.0834 6.08794 17.0834 9.99996C17.0834 13.912 13.9121 17.0833 10.0001 17.0833ZM9.16675 6.24996C9.16675 6.7102 9.53984 7.08329 10.0001 7.08329C10.4603 7.08329 10.8334 6.7102 10.8334 6.24996C10.8334 5.78972 10.4603 5.41663 10.0001 5.41663C9.53984 5.41663 9.16675 5.78972 9.16675 6.24996ZM9.16675 13.75C9.16675 14.2102 9.53984 14.5833 10.0001 14.5833C10.4603 14.5833 10.8334 14.2102 10.8334 13.75V8.74996C10.8334 8.28972 10.4603 7.91663 10.0001 7.91663C9.53984 7.91663 9.16675 8.28972 9.16675 8.74996V13.75Z"
+                                            fill="#FF4E30" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="flex-1 fz-14 d-inline-flex warning-color align-items-center">
+                                付款完成後，5個工作天內出貨 </div>
+                        </div>
+                    </div>
+                    <!-- 品牌 -->
+                    <div class="list-wrap product-action-bar">
+                        <div class="cell-wrap">
+                            <div class="d-inline-flex align-items-center list-title-width margin-right-sm">
+                                <p class="font-color-gray-600">
+                                    <span>品牌</span>
+                                </p>
+                            </div>
+                            <div class="flex-1 d-inline-flex normal-link font-underline align-items-center">
+                                Apple </div>
+                            <div class="icon-20">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M6.84883 3.9338C6.62731 4.15605 6.60771 4.50331 6.78967 4.74768L6.8503 4.81768L12.049 10L6.8503 15.1823C6.62804 15.4038 6.60729 15.751 6.78843 15.996L6.84883 16.0662C7.07034 16.2885 7.41753 16.3092 7.66251 16.1281L7.73271 16.0677L12.9888 10.8291C13.4193 10.4 13.4462 9.7203 13.0695 9.25991L12.9888 9.17089L7.73271 3.93232C7.48822 3.68865 7.0925 3.68931 6.84883 3.9338Z"
+                                        fill="#999999" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 出貨地 -->
+                    <div class="list-wrap product-action-bar">
+                        <div class="cell-wrap">
+                            <div class="d-inline-flex align-items-center list-title-width margin-right-sm">
+                                <p class="font-color-gray-600">
+                                    <span>出貨地</span>
+                                </p>
+                            </div>
+                            <div class="flex-1 d-inline-flex align-items-center">
+                                日本 </div>
+
+                        </div>
+                    </div>
+                    <!-- 配送方式 -->
+                    <div class="list-wrap product-action-bar">
+                        <div class="cell-wrap">
+                            <div class="d-inline-flex align-items-center list-title-width margin-right-sm">
+                                <p class="font-color-gray-600">
+                                    <span>配送方式</span>
+                                </p>
+                            </div>
+                            <div class="flex-1 d-inline-flex flex-direction-col">
+                                <div class="d-inline-flex">
+                                    跨境國際物流_普貨(運費$400，滿$1299免運)
+                                </div>
+                                <!-- <div class="d-inline-flex align-items-end">
+                                        <span class="margin-right-xs">宅配出貨</span>
+                                        <span class="font-color-gray-600 fz-12">運費$300</span>
+                                    </div>
+                                    <div class="d-inline-flex align-items-end margin-top-xs">
+                                        <span class="margin-right-xs">7-11常溫超取</span>
+                                        <span class="font-color-gray-600 fz-12">運費$60，滿$799免運</span>
+                                    </div> -->
+                            </div>
+                            <!-- <div class="icon-20">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M6.84883 3.9338C6.62731 4.15605 6.60771 4.50331 6.78967 4.74768L6.8503 4.81768L12.049 10L6.8503 15.1823C6.62804 15.4038 6.60729 15.751 6.78843 15.996L6.84883 16.0662C7.07034 16.2885 7.41753 16.3092 7.66251 16.1281L7.73271 16.0677L12.9888 10.8291C13.4193 10.4 13.4462 9.7203 13.0695 9.25991L12.9888 9.17089L7.73271 3.93232C7.48822 3.68865 7.0925 3.68931 6.84883 3.9338Z"
+                                            fill="#999999" />
+                                    </svg>
+                                </div> -->
+                        </div>
+                    </div>
+                    <!-- 付款方式 -->
+                    <div class="list-wrap product-action-bar">
+                        <div class="cell-wrap">
+                            <div class="d-inline-flex align-items-center list-title-width margin-right-sm">
+                                <p class="font-color-gray-600">
+                                    <span>付款方式</span>
+                                </p>
+                            </div>
+                            <div class="flex-1 d-inline-flex flex-direction-col">
+                                <div class="d-inline-flex">
+                                    ATM / 超商取貨付款 / 信用卡 / LINE Pay / 街口支付 / AFTEE先取後付 / 零卡分期 / 提貨券
+                                </div>
+                                <div class="d-inline-flex align-items-center margin-top-sm">
+                                    <div class="margin-right-sm d-inline-flex align-items-center">
+                                        <svg width="38" height="24" viewBox="0 0 38 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M34.1203 0H3.35619C3.22806 0 3.09971 0 2.97181 0.00074717C2.86369 0.00151698 2.75583 0.00271698 2.64796 0.00566038C2.41272 0.0120226 2.17546 0.0259019 1.94316 0.0676528C1.70714 0.110128 1.48752 0.179411 1.27326 0.288498C1.06263 0.395615 0.869791 0.535721 0.702676 0.702906C0.535489 0.870091 0.395383 1.06261 0.288289 1.27347C0.179179 1.48773 0.109851 1.70742 0.06767 1.94362C0.0256949 2.17598 0.0117229 2.4132 0.00538325 2.6482C0.00248513 2.75606 0.00124211 2.86392 0.000537962 2.97177C-0.000209208 3.09994 3.98491e-05 3.22802 3.98491e-05 3.35642V20.6359C3.98491e-05 20.7643 -0.000209208 20.8922 0.000537962 21.0206C0.00124211 21.1284 0.00248513 21.2363 0.00538325 21.3442C0.0117229 21.579 0.0256949 21.8162 0.06767 22.0485C0.109851 22.2848 0.179179 22.5044 0.288289 22.7186C0.395383 22.9295 0.535489 23.1223 0.702676 23.2892C0.869791 23.4567 1.06263 23.5968 1.27326 23.7036C1.48752 23.813 1.70714 23.8823 1.94316 23.9247C2.17546 23.9662 2.41272 23.9803 2.64796 23.9867C2.75583 23.9892 2.86369 23.9906 2.97181 23.9911C3.09971 23.9921 3.22806 23.9921 3.35619 23.9921H34.1203C34.2482 23.9921 34.3766 23.9921 34.5045 23.9911C34.6123 23.9906 34.7202 23.9892 34.8285 23.9867C35.0633 23.9803 35.3005 23.9662 35.5334 23.9247C35.7691 23.8823 35.9887 23.813 36.203 23.7036C36.4139 23.5968 36.6062 23.4567 36.7736 23.2892C36.9405 23.1223 37.0806 22.9295 37.188 22.7186C37.2974 22.5044 37.3666 22.2848 37.4086 22.0485C37.4506 21.8162 37.4642 21.579 37.4706 21.3442C37.4735 21.2363 37.475 21.1284 37.4755 21.0206C37.4765 20.8922 37.4765 20.7643 37.4765 20.6359V3.35642C37.4765 3.22802 37.4765 3.09994 37.4755 2.97177C37.475 2.86392 37.4735 2.75606 37.4706 2.6482C37.4642 2.4132 37.4506 2.17598 37.4086 1.94362C37.3666 1.70742 37.2974 1.48773 37.188 1.27347C37.0806 1.06261 36.9405 0.870091 36.7736 0.702906C36.6062 0.535721 36.4139 0.395615 36.203 0.288498C35.9887 0.179411 35.7691 0.110128 35.5334 0.0676528C35.3005 0.0259019 35.0633 0.0120226 34.8285 0.00566038C34.7202 0.00271698 34.6123 0.00151698 34.5045 0.00074717C34.3766 0 34.2482 0 34.1203 0Z"
+                                                fill="black" />
+                                            <path
+                                                d="M34.1204 0.799683L34.4989 0.800407C34.6014 0.801132 34.7039 0.802241 34.807 0.805049C34.9863 0.809894 35.1961 0.819607 35.3916 0.854656C35.5616 0.885268 35.7041 0.931818 35.8409 1.00146C35.976 1.07009 36.0997 1.16002 36.2078 1.26791C36.3162 1.37652 36.4063 1.50046 36.4758 1.63701C36.5451 1.77275 36.5913 1.91462 36.6217 2.08583C36.6567 2.27924 36.6664 2.48958 36.6713 2.67001C36.674 2.77185 36.6754 2.87369 36.6759 2.97795C36.6769 3.10404 36.6769 3.23007 36.6769 3.35641V20.6359C36.6769 20.7622 36.6769 20.888 36.6759 21.0168C36.6754 21.1186 36.6741 21.2205 36.6713 21.3225C36.6664 21.5027 36.6567 21.7129 36.6213 21.9086C36.5913 22.0774 36.5451 22.2193 36.4754 22.3558C36.4061 22.492 36.3162 22.6158 36.2082 22.7237C36.0996 22.8324 35.9762 22.922 35.8396 22.9913C35.7038 23.0606 35.5615 23.1071 35.3932 23.1374C35.1937 23.173 34.9751 23.1827 34.8105 23.1872C34.707 23.1895 34.6039 23.1909 34.4983 23.1914C34.3725 23.1924 34.2463 23.1924 34.1204 23.1924H3.35628C3.3546 23.1924 3.35297 23.1924 3.35128 23.1924C3.22688 23.1924 3.10224 23.1924 2.97559 23.1914C2.87232 23.1909 2.76928 23.1896 2.66965 23.1873C2.50129 23.1827 2.2826 23.173 2.08473 23.1376C1.91499 23.1071 1.77269 23.0606 1.63512 22.9904C1.49975 22.9218 1.37651 22.8322 1.2678 22.7233C1.15994 22.6156 1.0703 22.4922 1.001 22.3558C0.931624 22.2195 0.885208 22.0772 0.85469 21.9063C0.819412 21.711 0.809722 21.5016 0.804879 21.3227C0.802114 21.2202 0.800959 21.1178 0.800303 21.0159L0.799805 20.7153L0.799827 20.6359V3.35641L0.799805 3.27703L0.80028 2.977C0.800959 2.87455 0.802114 2.77212 0.804879 2.66976C0.809722 2.49064 0.819412 2.28116 0.854982 2.08423C0.885231 1.91489 0.931624 1.77257 1.00136 1.63561C1.07012 1.50023 1.15992 1.37666 1.26835 1.26825C1.37635 1.1602 1.49999 1.07038 1.63623 1.0011C1.77233 0.931796 1.9149 0.885268 2.08464 0.854724C2.28022 0.819585 2.49013 0.809894 2.6699 0.805026C2.77238 0.802241 2.87485 0.801132 2.97656 0.80043L3.35628 0.799683H34.1204"
+                                                fill="white" />
+                                            <path
+                                                d="M10.2311 8.06957C10.552 7.66821 10.7697 7.12931 10.7123 6.57861C10.2426 6.60197 9.66934 6.88851 9.33747 7.29018C9.03949 7.63415 8.77576 8.19562 8.84451 8.72323C9.37181 8.76897 9.89862 8.45967 10.2311 8.06957Z"
+                                                fill="black" />
+                                            <path
+                                                d="M10.7062 8.8263C9.94041 8.78068 9.28932 9.2609 8.92363 9.2609C8.55774 9.2609 7.99775 8.84928 7.39208 8.86038C6.60375 8.87196 5.87228 9.31768 5.47223 10.0266C4.64942 11.4448 5.25509 13.5484 6.05524 14.7034C6.44381 15.2749 6.9121 15.904 7.52915 15.8814C8.11215 15.8586 8.34067 15.5039 9.04933 15.5039C9.75748 15.5039 9.96332 15.8814 10.5805 15.87C11.2205 15.8586 11.6206 15.2983 12.0091 14.7263C12.4549 14.0749 12.6374 13.4459 12.6489 13.4114C12.6374 13.4 11.4148 12.931 11.4034 11.5246C11.3919 10.347 12.3633 9.78685 12.409 9.75212C11.8605 8.94077 11.0033 8.84928 10.7062 8.8263Z"
+                                                fill="black" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M20.1972 10.0501C20.1972 8.37981 19.0382 7.23255 17.3739 7.23255V7.23254H14.158V15.8102H15.4894V12.8797H17.3321C19.0144 12.8797 20.1972 11.7264 20.1972 10.0501ZM17.0171 11.7621H15.4894V8.35607H17.023C18.1762 8.35607 18.836 8.97431 18.836 10.0561C18.836 11.138 18.1762 11.7621 17.0171 11.7621Z"
+                                                fill="black" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M22.8695 12.1842C21.3833 12.2674 20.5452 12.9391 20.5452 14.0329C20.5452 15.1563 21.4012 15.9172 22.6257 15.9172C23.446 15.9172 24.2367 15.4774 24.5992 14.7818H24.6288V15.8102H25.8593V11.5006C25.8593 10.2463 24.8905 9.44385 23.3747 9.44385C21.8291 9.44385 20.8662 10.276 20.7949 11.4055H22.0075C22.1203 10.8467 22.584 10.4901 23.3272 10.4901C24.1117 10.4901 24.5813 10.9062 24.5813 11.6017V12.0832L22.8695 12.1842ZM24.5813 12.9748V13.4682C24.5813 14.2825 23.8799 14.9007 22.9823 14.9007C22.2928 14.9007 21.841 14.544 21.841 13.9972C21.841 13.4623 22.2749 13.1234 23.0417 13.0699L24.5813 12.9748Z"
+                                                fill="black" />
+                                            <path
+                                                d="M27.0208 18.1107V17.0704C27.1158 17.0941 27.3297 17.0941 27.4368 17.0941C28.0312 17.0941 28.3522 16.8445 28.5483 16.2025C28.5483 16.1906 28.6613 15.8221 28.6613 15.8161L26.4026 9.55676H27.7934L29.3747 14.6451H29.3984L30.9797 9.55676H32.335L29.9927 16.1371C29.458 17.653 28.8397 18.1404 27.5439 18.1404C27.4368 18.1404 27.1158 18.1284 27.0208 18.1107Z"
+                                                fill="black" />
+                                        </svg>
+                                    </div>
+                                    <span>Apple Pay</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 分期方式 -->
+                    <div class="list-wrap product-action-bar">
+                        <div class="cell-wrap">
+                            <div class="d-inline-flex align-items-center list-title-width margin-right-sm">
+                                <p class="font-color-gray-600">
+                                    <span>分期方式</span>
+                                </p>
+                            </div>
+                            <div class="flex-1 d-inline-flex align-items-center">
+                                12期0利率/每期$1,159</div>
+                            <div class="icon-20">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M6.84883 3.9338C6.62731 4.15605 6.60771 4.50331 6.78967 4.74768L6.8503 4.81768L12.049 10L6.8503 15.1823C6.62804 15.4038 6.60729 15.751 6.78843 15.996L6.84883 16.0662C7.07034 16.2885 7.41753 16.3092 7.66251 16.1281L7.73271 16.0677L12.9888 10.8291C13.4193 10.4 13.4462 9.7203 13.0695 9.25991L12.9888 9.17089L7.73271 3.93232C7.48822 3.68865 7.0925 3.68931 6.84883 3.9338Z"
+                                        fill="#999999" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 贈品 -->
+                    <div class="list-wrap product-action-bar">
+                        <div class="cell-wrap">
+                            <div class="d-inline-flex align-items-center list-title-width margin-right-sm">
+                                <p class="font-color-gray-600">
+                                    <span>贈品</span>
+                                </p>
+                            </div>
+                            <div class="flex-1 d-inline-flex flex-direction-col">
+                                <div class="d-inline-flex">
+                                    4/15~8/19 國際夏日有禮賞
+                                    贈：強化麵碗3入 SP-1911
+                                    原廠若有更換活動以原廠實際活動為主(數量有限送完為止)
+                                    4/15~4/30間訂單贈品將於5/29鑑賞期過號統一發送
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 配件 -->
+                    <div class="list-wrap product-action-bar">
+                        <div class="cell-wrap">
+                            <div class="d-inline-flex align-items-center list-title-width margin-right-sm">
+                                <p class="font-color-gray-600">
+                                    <span>配件</span>
+                                </p>
+                            </div>
+                            <div class="flex-1 d-inline-flex flex-direction-col">
+                                <div class="d-inline-flex">
+                                    說明書*1、遙控器*1、保証卡*1、AV線*1、變壓器*1
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 大宗採購 -->
+                    <div class="list-wrap product-action-bar">
+                        <div class="cell-wrap">
+                            <div class="d-inline-flex align-items-center list-title-width margin-right-sm">
+                                <p class="font-color-gray-600">
+                                    <span>大宗採購</span>
+                                </p>
+                            </div>
+                            <div class="flex-1 d-inline-flex align-items-center">
+                                需求表單</div>
+                            <div class="icon-20">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M6.84883 3.9338C6.62731 4.15605 6.60771 4.50331 6.78967 4.74768L6.8503 4.81768L12.049 10L6.8503 15.1823C6.62804 15.4038 6.60729 15.751 6.78843 15.996L6.84883 16.0662C7.07034 16.2885 7.41753 16.3092 7.66251 16.1281L7.73271 16.0677L12.9888 10.8291C13.4193 10.4 13.4462 9.7203 13.0695 9.25991L12.9888 9.17089L7.73271 3.93232C7.48822 3.68865 7.0925 3.68931 6.84883 3.9338Z"
+                                        fill="#999999" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 贈品專區 -->
+            <div class="section addGiftProduct">
+                <!-- 贈品 -->
+                <div class="list-wrap">
+                    <div class="cell-wrap">
+                        <div class="d-inline-flex align-items-center list-title-width margin-right-sm">
+                            <p class="font-color-gray-600">
+                                <span>贈品選擇</span>
+                            </p>
+                        </div>
+                        <div class="flex-1 d-inline-flex align-items-center">
+                            好禮3選2，(可選2件，已選2件)</div>
+                    </div>
+                </div>
+                <div class="padding-sides-lg margin-bottom-lg">
+                    <div class="cell-wrap">
+                        <div class="d-inline-flex margin-right-sm">
+                            <div class="icon-20 warning-color">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M10.0001 18.3333C14.6025 18.3333 18.3334 14.6023 18.3334 9.99996C18.3334 5.39759 14.6025 1.66663 10.0001 1.66663C5.39771 1.66663 1.66675 5.39759 1.66675 9.99996C1.66675 14.6023 5.39771 18.3333 10.0001 18.3333ZM10.0001 17.0833C6.08806 17.0833 2.91675 13.912 2.91675 9.99996C2.91675 6.08794 6.08806 2.91663 10.0001 2.91663C13.9121 2.91663 17.0834 6.08794 17.0834 9.99996C17.0834 13.912 13.9121 17.0833 10.0001 17.0833ZM9.16675 6.24996C9.16675 6.7102 9.53984 7.08329 10.0001 7.08329C10.4603 7.08329 10.8334 6.7102 10.8334 6.24996C10.8334 5.78972 10.4603 5.41663 10.0001 5.41663C9.53984 5.41663 9.16675 5.78972 9.16675 6.24996ZM9.16675 13.75C9.16675 14.2102 9.53984 14.5833 10.0001 14.5833C10.4603 14.5833 10.8334 14.2102 10.8334 13.75V8.74996C10.8334 8.28972 10.4603 7.91663 10.0001 7.91663C9.53984 7.91663 9.16675 8.28972 9.16675 8.74996V13.75Z"
+                                        fill="#FF4E30" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="flex-1 d-inline-flex fz-14 warning-color align-items-center">
+                            付款完成後，5個工作天內出貨 </div>
+                    </div>
+                </div>
+                <!-- 贈品商品瀏覽 -->
+                <div class="scroll-products-wrapper">
+                    <ul class="scroll-products-box">
+                        <li>
+                            <div class="product-card product-card-width--custom">
+                                <div class="thumbnail">
+                                    <div class="aspect-ratio-content">
+                                        <a href="javascript:;">
+                                            <img src="https://media.etmall.com.tw/nximg/003889/3889562/3889562_xl.jpg?t=18498697011"
+                                                class="" width="100%" height="100%"
+                                                alt="【美國BestVite】必賜力BCAA支鏈胺基膠囊4瓶組 (90顆*4瓶)">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="p-content">
+                                    <div class="p-title">
+                                        <span class="p-title-text">
+                                            <a href="javascript:;">
+                                                【EVELINE】女皇蜂子逆齡膠囊-驚爆市場 </a>
+                                        </span>
+                                    </div>
+                                    <div class="p-count">
+                                        <span class="p-count-style">
+                                            <span>剩餘:</span>
+                                            <span class="p-count__value">3</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="p-footer">
+                                    <div class="p-footer-container">
+                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M12 2.99219C17.5228 2.99219 22 7.46934 22 12.9922C22 18.515 17.5228 22.9922 12 22.9922C6.47715 22.9922 2 18.515 2 12.9922C2 7.46934 6.47715 2.99219 12 2.99219ZM12 4.49219C7.30558 4.49219 3.5 8.29777 3.5 12.9922C3.5 17.6866 7.30558 21.4922 12 21.4922C16.6944 21.4922 20.5 17.6866 20.5 12.9922C20.5 8.29777 16.6944 4.49219 12 4.49219ZM16 12.2422C16.4142 12.2422 16.75 12.578 16.75 12.9922C16.75 13.3719 16.4678 13.6857 16.1018 13.7353L16 13.7422H12.5V17.2422C12.5 17.6564 12.1642 17.9922 11.75 17.9922C11.3703 17.9922 11.0565 17.71 11.0068 17.344L11 17.2422V13.7422H7.5C7.08579 13.7422 6.75 13.4064 6.75 12.9922C6.75 12.6125 7.03215 12.2987 7.39823 12.249L7.5 12.2422H11V8.74219C11 8.32797 11.3358 7.99219 11.75 7.99219C12.1297 7.99219 12.4435 8.27434 12.4932 8.64042L12.5 8.74219V12.2422H16Z"
+                                                fill="#5D5D5D" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="product-card product-card-width--custom">
+                                <div class="thumbnail">
+                                    <div class="aspect-ratio-content">
+                                        <a href="javascript:;">
+                                            <img src="https://media.etmall.com.tw/nximg/003889/3889562/3889562_xl.jpg?t=18498697011"
+                                                class="" width="100%" height="100%"
+                                                alt="【美國BestVite】必賜力BCAA支鏈胺基膠囊4瓶組 (90顆*4瓶)">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="p-content">
+                                    <div class="p-title">
+                                        <span class="p-title-text">
+                                            <a href="javascript:;">
+                                                【EVELINE】女皇蜂子逆齡膠囊-驚爆市場 </a>
+                                        </span>
+                                    </div>
+                                    <div class="p-count">
+                                        <span class="p-count-style">
+                                            <span>剩餘:</span>
+                                            <span class="p-count__value">3</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="p-footer">
+                                    <div class="p-footer-container">
+                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M12 2.99219C17.5228 2.99219 22 7.46934 22 12.9922C22 18.515 17.5228 22.9922 12 22.9922C6.47715 22.9922 2 18.515 2 12.9922C2 7.46934 6.47715 2.99219 12 2.99219ZM12 4.49219C7.30558 4.49219 3.5 8.29777 3.5 12.9922C3.5 17.6866 7.30558 21.4922 12 21.4922C16.6944 21.4922 20.5 17.6866 20.5 12.9922C20.5 8.29777 16.6944 4.49219 12 4.49219ZM16 12.2422C16.4142 12.2422 16.75 12.578 16.75 12.9922C16.75 13.3719 16.4678 13.6857 16.1018 13.7353L16 13.7422H12.5V17.2422C12.5 17.6564 12.1642 17.9922 11.75 17.9922C11.3703 17.9922 11.0565 17.71 11.0068 17.344L11 17.2422V13.7422H7.5C7.08579 13.7422 6.75 13.4064 6.75 12.9922C6.75 12.6125 7.03215 12.2987 7.39823 12.249L7.5 12.2422H11V8.74219C11 8.32797 11.3358 7.99219 11.75 7.99219C12.1297 7.99219 12.4435 8.27434 12.4932 8.64042L12.5 8.74219V12.2422H16Z"
+                                                fill="#5D5D5D" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="product-card product-card-width--custom">
+                                <div class="thumbnail">
+                                    <div class="aspect-ratio-content">
+                                        <a href="javascript:;">
+                                            <img src="https://media.etmall.com.tw/nximg/003889/3889562/3889562_xl.jpg?t=18498697011"
+                                                class="" width="100%" height="100%"
+                                                alt="【美國BestVite】必賜力BCAA支鏈胺基膠囊4瓶組 (90顆*4瓶)">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="p-content">
+                                    <div class="p-title">
+                                        <span class="p-title-text">
+                                            <a href="javascript:;">
+                                                【EVELINE】女皇蜂子逆齡膠囊-驚爆市場 </a>
+                                        </span>
+                                    </div>
+                                    <div class="p-count">
+                                        <span class="p-count-style">
+                                            <span>剩餘:</span>
+                                            <span class="p-count__value">3</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="p-footer">
+                                    <div class="p-footer-container">
+                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M12 2.99219C17.5228 2.99219 22 7.46934 22 12.9922C22 18.515 17.5228 22.9922 12 22.9922C6.47715 22.9922 2 18.515 2 12.9922C2 7.46934 6.47715 2.99219 12 2.99219ZM12 4.49219C7.30558 4.49219 3.5 8.29777 3.5 12.9922C3.5 17.6866 7.30558 21.4922 12 21.4922C16.6944 21.4922 20.5 17.6866 20.5 12.9922C20.5 8.29777 16.6944 4.49219 12 4.49219ZM16 12.2422C16.4142 12.2422 16.75 12.578 16.75 12.9922C16.75 13.3719 16.4678 13.6857 16.1018 13.7353L16 13.7422H12.5V17.2422C12.5 17.6564 12.1642 17.9922 11.75 17.9922C11.3703 17.9922 11.0565 17.71 11.0068 17.344L11 17.2422V13.7422H7.5C7.08579 13.7422 6.75 13.4064 6.75 12.9922C6.75 12.6125 7.03215 12.2987 7.39823 12.249L7.5 12.2422H11V8.74219C11 8.32797 11.3358 7.99219 11.75 7.99219C12.1297 7.99219 12.4435 8.27434 12.4932 8.64042L12.5 8.74219V12.2422H16Z"
+                                                fill="#5D5D5D" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 加購優惠商品 -->
+            <div class="section addProduct">
+                <div class="list-wrap">
+                    <div class="cell-wrap">
+                        <div class="d-inline-flex align-items-center margin-right-sm">
+                            <p class="font-color-gray-600">
+                                <span>加購優惠商品</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 贈品商品瀏覽 -->
+                <div class="scroll-products-wrapper">
+                    <ul class="scroll-products-box">
+                        <li>
+                            <div class="product-card product-card-width--custom">
+                                <div class="thumbnail">
+                                    <div class="aspect-ratio-content">
+                                        <a href="javascript:;">
+                                            <img src="https://media.etmall.com.tw/nximg/003889/3889562/3889562_xl.jpg?t=18498697011"
+                                                class="" width="100%" height="100%"
+                                                alt="【美國BestVite】必賜力BCAA支鏈胺基膠囊4瓶組 (90顆*4瓶)">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="p-content">
+                                    <div class="p-title">
+                                        <span class="p-title-text">
+                                            <a href="javascript:;">
+                                                【EVELINE】女皇蜂子逆齡膠囊-驚爆市場 </a>
+                                        </span>
+                                    </div>
+                                    <div class="p-count display-none">
+                                        <span class="p-count-style">
+                                            <span>剩餘:</span>
+                                            <span class="p-count__value">3</span>
+                                        </span>
+                                    </div>
+                                    <div class="p-price">
+                                        <span class="fz-14 font-color-gray-600 price-deprecated">$629</span>
+                                        <div class="price__wrap">
+                                            <div class="price__final">
+                                                <span class="custom-price-style">
+                                                    <span class="fz-12">$</span>
+                                                    <span class="price__value">779</span>
+                                                </span>
+                                            </div>
+                                            <div class="price__discount-text fz-14">(售價已折)</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-footer">
+                                    <div class="p-footer-container">
+                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M12 2.99219C17.5228 2.99219 22 7.46934 22 12.9922C22 18.515 17.5228 22.9922 12 22.9922C6.47715 22.9922 2 18.515 2 12.9922C2 7.46934 6.47715 2.99219 12 2.99219ZM12 4.49219C7.30558 4.49219 3.5 8.29777 3.5 12.9922C3.5 17.6866 7.30558 21.4922 12 21.4922C16.6944 21.4922 20.5 17.6866 20.5 12.9922C20.5 8.29777 16.6944 4.49219 12 4.49219ZM16 12.2422C16.4142 12.2422 16.75 12.578 16.75 12.9922C16.75 13.3719 16.4678 13.6857 16.1018 13.7353L16 13.7422H12.5V17.2422C12.5 17.6564 12.1642 17.9922 11.75 17.9922C11.3703 17.9922 11.0565 17.71 11.0068 17.344L11 17.2422V13.7422H7.5C7.08579 13.7422 6.75 13.4064 6.75 12.9922C6.75 12.6125 7.03215 12.2987 7.39823 12.249L7.5 12.2422H11V8.74219C11 8.32797 11.3358 7.99219 11.75 7.99219C12.1297 7.99219 12.4435 8.27434 12.4932 8.64042L12.5 8.74219V12.2422H16Z"
+                                                fill="#5D5D5D" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 相關商品 -->
+            <div class="section">
+                <div class="list-wrap">
+                    <div class="cell-wrap">
+                        <div class="d-inline-flex align-items-center margin-right-sm">
+                            <p class="font-color-gray-600">
+                                <span>相關商品</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="pd-preview">
+                    <!-- list -->
+                    <div class="list-wrap-sm product-action-bar">
+                        <div class="cell-title">
+                            <div class="fz-14 normal-link list-text-area margin-right-lg">
+                                蘭蔻超持無敵青春持久超強粉底30ml (2組入) </div>
+                            <div class="price__wrap">
+                                <div class="price__final">
+                                    <span class="custom-price-style">
+                                        <span class="fz-12">$</span>
+                                        <span class="price__value">1,111,200</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-wrap-sm product-action-bar">
+                        <div class="cell-title">
+                            <div class="fz-14 normal-link list-text-area margin-right-lg">
+                                蘭蔻超持無敵青春持久超強粉底30ml (2組入) </div>
+                            <div class="price__wrap">
+                                <div class="price__final">
+                                    <span class="custom-price-style">
+                                        <span class="fz-12">$</span>
+                                        <span class="price__value">1,111,200</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Banner輪播 -->
+            <div class="section productPromoteBanner">
+                <div class="productPromoteBanner-container">
+                    <div class="super__banner">
+                        <div class="slick-slider super-banner--center-mode withContent">
+                            <!-- Banners -->
+                            <div class="slick-list slick-list-pd-side">
+                                <div class="slick-track">
+                                    <!-- Banner1 -->
+                                    <div data-index="2" tabindex="-1" class="slick-slide slick-cloned"
+                                        aria-hidden="true" style="width: 310px;">
+                                        <div>
+                                            <div tabindex="-1" style="width: 100%; display: inline-block;">
+                                                <a>
+                                                    <div class="aspect-ratio">
+                                                        <div class="prepare-content-space"
+                                                            style="padding-top: 43.7333%;">
+                                                        </div>
+                                                        <div class="aspect-ratio-content">
+                                                            <img class=""
+                                                                src="https://media.etmall.com.tw/Promo/Image/ProductBanner/22582/d18f1188-7198-477d-9b9f-99b25d04681a.jpg"
+                                                                width="100%" height="100%">
+                                                        </div>
+                                                    </div>
+                                                    <div class="contentWrap">
+                                                        <span class="title ellipsis">隨身瓶愛地球指定品6折起</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-index="3" tabindex="-1"
+                                        class="slick-slide slick-active slick-center slick-cloned" aria-hidden="true"
+                                        style="width: 310px;">
+                                        <div>
+                                            <div tabindex="-1" style="width: 100%; display: inline-block;">
+                                                <a title="小資女嚴選 妝髮省錢術1折起" href="javascript:;"
+                                                    data-category="ProdDetailBN" data-action="ProdDetailBN_BN"
+                                                    data-label="ProdDetailBN_BN_小資女嚴選 妝髮省錢術1折起"
+                                                    data-super-banner="true">
+                                                    <div class="aspect-ratio">
+                                                        <div class="prepare-content-space"
+                                                            style="padding-top: 43.7333%;">
+                                                        </div>
+                                                        <div class="aspect-ratio-content">
+                                                            <img class=""
+                                                                src="https://media.etmall.com.tw/Promo/Image/ProductBanner/26791/d8509e24-c9e5-4d30-b507-1f1c1f6b1786.jpg"
+                                                                alt="小資女嚴選 妝髮省錢術1折起" width="100%" height="100%">
+                                                        </div>
+                                                    </div>
+                                                    <div class="contentWrap">
+                                                        <span class="title ellipsis">
+                                                            小資女嚴選妝髮省錢術1折起
+                                                        </span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-index="4" tabindex="-1" class="slick-slide slick-cloned"
+                                        aria-hidden="true" style="width: 310px;">
+                                        <div>
+                                            <div tabindex="-1" style="width: 100%; display: inline-block;"><a
+                                                    title="隨身瓶愛地球指定品6折起" href="https://m.etmall.com.tw/gp/180911"
+                                                    data-category="ProdDetailBN" data-action="ProdDetailBN_BN"
+                                                    data-label="ProdDetailBN_BN_隨身瓶愛地球指定品6折起" data-super-banner="true">
+                                                    <div class="aspect-ratio">
+                                                        <div class="prepare-content-space"
+                                                            style="padding-top: 43.7333%;"></div>
+                                                        <div class="aspect-ratio-content"><img class=""
+                                                                src="https://media.etmall.com.tw/Promo/Image/ProductBanner/22582/d18f1188-7198-477d-9b9f-99b25d04681a.jpg"
+                                                                alt="隨身瓶愛地球指定品6折起" width="100%" height="100%"></div>
+                                                    </div>
+                                                    <div class="contentWrap"><span
+                                                            class="title ellipsis">隨身瓶愛地球指定品6折起</span></div>
+                                                </a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Dots -->
+                            <ul class="slick-dots slick-dots--custom">
+                                <li><button>1</button></li>
+                                <li class="slick-active dot-active"><button>2</button></li>
+                                <li><button>3</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 商品介紹 -->
+            <div class="section collasible-block">
+                <div class="list-wrap">
+                    <div class="cell-wrap">
+                        <div class="d-inline-flex align-items-center margin-right-sm">
+                            <p class="font-color-gray-600">
+                                <span>商品介紹</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="collasible-content">
+                    <div class="fz-16 collasible-content-sub-section-content padding-sides-lg">
+                        <p>
+                            ◆ 添加蠶絲蛋白精華 &nbsp;<br>◆ 柔軟再升級，紙織柔化新技術&nbsp;<br>◆ 棉絮般的柔軟舒適<br>◆ 美洲進口處女紙漿&nbsp;<br>◆ 不含螢光劑
+                            &nbsp;<br>◆ 可在馬桶中分解
+                        </p>
+                        <p>
+                            <img
+                                src="https://media.etmall.com.tw/BBCont/002654/2654184/ceb49be5-d518-4173-a95b-4f8795cec213.jpg"><br>
+                            <img
+                                src="https://media.etmall.com.tw/BBCont/002654/2654184/435e63fa-8290-4f38-a6cc-c5e20497b824.jpg"><br>&nbsp;
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- 商品詳細說明 -->
+            <div class="product-list">
+                <!-- 商品規格 -->
+                <div class="section collasible-block">
+                    <div class="list-wrap">
+                        <div class="cell-wrap">
+                            <div class="d-inline-flex align-items-center margin-right-sm">
+                                <p class="font-color-gray-600">
+                                    <span>商品規格</span>
+                                </p>
+                            </div>
+                            <div class="flex-1 d-inline-flex align-items-center">
+                            </div>
+                            <div class="icon-20 rotate-180deg">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M3.9338 7.84101C4.15605 7.61949 4.50331 7.5999 4.74768 7.78186L4.81768 7.84249L10 13.0412L15.1823 7.84249C15.4038 7.62023 15.751 7.59948 15.996 7.78062L16.0662 7.84101C16.2885 8.06253 16.3092 8.40972 16.1281 8.6547L16.0677 8.7249L10.8291 13.981C10.4 14.4115 9.7203 14.4384 9.25991 14.0617L9.17089 13.981L3.93232 8.7249C3.68865 8.48041 3.68931 8.08468 3.9338 7.84101Z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collasible-content product-action-bar">
+                        <div class="padding-sides-lg padding-updown-lg">
+                            <div class="fz-16">
+                                此商品組合包括： 橘子工坊 食器妙用清潔粉450gx3瓶 + 橘子工坊 天然濃縮洗衣精補充包1500mlx6包-制菌力
+                            </div>
+                            <div class="table-wrap">
+                                <div class="margin-top-lg">
+                                    <div class="card-table">
+                                        <table class="table">
+                                            <tbody>
+                                                <!-- table list -->
+                                                <tr>
+                                                    <td>商品名稱</td>
+                                                    <td colspan="6">橘子工坊 食器妙用清潔粉450gx3瓶</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>品牌</td>
+                                                    <td colspan="6">3M</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>型號</td>
+                                                    <td colspan="6">FD-A90W</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>定位</td>
+                                                    <td>效能筆電</td>
+                                                    <td>輕薄筆電</td>
+                                                    <td>輕薄筆電</td>
+                                                    <td>輕薄筆電</td>
+                                                    <td>輕薄筆電</td>
+                                                    <td>輕薄筆電</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>定位</td>
+                                                    <td colspan="3">效能筆電</td>
+                                                    <td colspan="3">輕薄筆電</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>定位</td>
+                                                    <td colspan="1">效能筆電</td>
+                                                    <td colspan="1">輕薄筆電</td>
+                                                    <td colspan="1">輕薄筆電</td>
+                                                    <td colspan="1">輕薄筆電</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="margin-top-lg display-none">
+                                    <div class="card-table">
+                                        <table class="table">
+                                            <tbody>
+                                                <!-- table list -->
+                                                <tr>
+                                                    <td>商品名稱</td>
+                                                    <td>橘子工坊 食器妙用清潔粉450gx3瓶</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>品牌</td>
+                                                    <td>3M</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>型號</td>
+                                                    <td>FD-A90W</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 使用方法說明 -->
+                <div class="section collasible-block">
+                    <div class="list-wrap">
+                        <div class="cell-wrap">
+                            <div class="d-inline-flex align-items-center margin-right-sm">
+                                <p class="font-color-gray-600">
+                                    <span>使用方法說明</span>
+                                </p>
+                            </div>
+                            <div class="flex-1 d-inline-flex align-items-center">
+                            </div>
+                            <div class="icon-20 rotate-180deg">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M3.9338 7.84101C4.15605 7.61949 4.50331 7.5999 4.74768 7.78186L4.81768 7.84249L10 13.0412L15.1823 7.84249C15.4038 7.62023 15.751 7.59948 15.996 7.78062L16.0662 7.84101C16.2885 8.06253 16.3092 8.40972 16.1281 8.6547L16.0677 8.7249L10.8291 13.981C10.4 14.4115 9.7203 14.4384 9.25991 14.0617L9.17089 13.981L3.93232 8.7249C3.68865 8.48041 3.68931 8.08468 3.9338 7.84101Z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collasible-content product-action-bar">
+                        <div class="padding-sides-lg padding-updown-lg">
+                            <span>
+                                每天一次，每日1瓶，最多不超過2瓶。
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 注意事項 -->
+                <div class="section collasible-block">
+                    <div class="list-wrap">
+                        <div class="cell-wrap">
+                            <div class="d-inline-flex align-items-center margin-right-sm">
+                                <p class="font-color-gray-600">
+                                    <span>注意事項</span>
+                                </p>
+                            </div>
+                            <div class="flex-1 d-inline-flex align-items-center">
+                            </div>
+                            <div class="icon-20 rotate-180deg">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M3.9338 7.84101C4.15605 7.61949 4.50331 7.5999 4.74768 7.78186L4.81768 7.84249L10 13.0412L15.1823 7.84249C15.4038 7.62023 15.751 7.59948 15.996 7.78062L16.0662 7.84101C16.2885 8.06253 16.3092 8.40972 16.1281 8.6547L16.0677 8.7249L10.8291 13.981C10.4 14.4115 9.7203 14.4384 9.25991 14.0617L9.17089 13.981L3.93232 8.7249C3.68865 8.48041 3.68931 8.08468 3.9338 7.84101Z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collasible-content product-action-bar">
+                        <div class="padding-sides-lg padding-updown-lg">
+                            <div class="collasible-content-sub fz-16">
+                                <div class="collasible-content-sub-title">【注意事項】</div>
+                                <div class="collasible-content-sub-content">
+                                    ◆送達地點限制：限台灣本島<br>
+                                    <br>◆保存方式：請存放陰涼處，避免陽光直射<br><br>◆注意事項：使用如有任何不適，請暫停使用，並請教醫生<br><br>◆退貨限制：<br>-此組合主商品未開放體驗，除特殊狀況外，個人衛生用品凡主商品經拆封或組合商品有缺件均不接受退貨，退貨時保持外箱及配件完整<br>-溫馨提醒您，本商品除特別載明為試用品或得試用一定數量外，一經使用即無法退換，敬請見諒。
+                                </div>
+                            </div>
+                            <div class="collasible-content-sub fz-16">
+                                <div class="collasible-content-sub-title">【退貨說明】</div>
+                                <div class="collasible-content-sub-content">
+                                    <span>若您購買之商品或服務為下列情形之一，恕無法提供退貨服務：</span>
+                                    <ol class="eu-list--decimal">
+                                        <li>易於腐敗、保存期限較短或解約時即將逾期。</li>
+                                        <li>依消費者要求所為之客製化給付。</li>
+                                        <li>報紙、期刊或雜誌。</li>
+                                        <li>經消費者拆封之影音商品或電腦軟體。</li>
+                                        <li>非以有形媒介提供之數位內容或一經提供即為完成之線上服務，經消費者事先同意始提供。</li>
+                                        <li>已拆封之個人衛生用品，依特通訊交易解除權合理例外情事適用準則辦理。</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 曾瀏覽過 -->
+            <div class="section recommendProduct">
+                <div class="recommend__tabs">
+                    <div class="recommend__tabs__list select">猜你會喜歡</div>
+                    <div class="recommend__tabs__list">我曾瀏覽過</div>
+                </div>
+                <div class="recommend__products">
+                    <!-- 商品卡片 -->
+                    <div class="recommend__product width-col-33">
+                        <div class="product-card">
+                            <div class="thumbnail">
+                                <div class="aspect-ratio-content">
+                                    <a href="javascript:;">
+                                        <img src="https://media.etmall.com.tw/nximg/003614/3614504/3614504_xl.jpg?t=19382299355"
+                                            class="" width="100%" height="100%"
+                                            alt="【美國BestVite】必賜力BCAA支鏈胺基膠囊4瓶組 (90顆*4瓶)">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="p-content">
+                                <div class="p-title">
+                                    <span class="p-title-text">
+                                        <a href="javascript:;">
+                                            買一送一【BLACK HAMMER】真空不鏽鋼保冰保溫冰壩杯 930ML(多色可選/陶瓷塗層/有提把/附粗吸管) </a>
+                                    </span>
+                                </div>
+                                <div class="p-count display-none">
+                                    <span class="p-count-style">
+                                        <span>剩餘:</span>
+                                        <span class="p-count__value">3</span>
+                                    </span>
+                                </div>
+                                <div class="p-price">
+                                    <span class="fz-14 font-color-gray-600 price-deprecated display-none">$629</span>
+                                    <div class="price__wrap">
+                                        <div class="price__final">
+                                            <span class="custom-price-style">
+                                                <span class="fz-12">$</span>
+                                                <span class="price__value">890</span>
+                                            </span>
+                                        </div>
+                                        <div class="price__discount-text fz-14 display-none">(售價已折)</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recommend__product width-col-33">
+                        <div class="product-card">
+                            <div class="thumbnail">
+                                <div class="aspect-ratio-content">
+                                    <a href="javascript:;">
+                                        <img src="https://media.etmall.com.tw/nximg/003614/3614504/3614504_xl.jpg?t=19382299355"
+                                            class="" width="100%" height="100%"
+                                            alt="【美國BestVite】必賜力BCAA支鏈胺基膠囊4瓶組 (90顆*4瓶)">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="p-content">
+                                <div class="p-title">
+                                    <span class="p-title-text">
+                                        <a href="javascript:;">
+                                            買一送一【BLACK HAMMER】真空不鏽鋼保冰保溫冰壩杯 930ML(多色可選/陶瓷塗層/有提把/附粗吸管) </a>
+                                    </span>
+                                </div>
+                                <div class="p-count display-none">
+                                    <span class="p-count-style">
+                                        <span>剩餘:</span>
+                                        <span class="p-count__value">3</span>
+                                    </span>
+                                </div>
+                                <div class="p-price">
+                                    <span class="fz-14 font-color-gray-600 price-deprecated display-none">$629</span>
+                                    <div class="price__wrap">
+                                        <div class="price__final">
+                                            <span class="custom-price-style">
+                                                <span class="fz-12">$</span>
+                                                <span class="price__value">890</span>
+                                            </span>
+                                        </div>
+                                        <div class="price__discount-text fz-14 display-none">(售價已折)</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recommend__product width-col-33">
+                        <div class="product-card">
+                            <div class="thumbnail">
+                                <div class="aspect-ratio-content">
+                                    <a href="javascript:;">
+                                        <img src="https://media.etmall.com.tw/nximg/003614/3614504/3614504_xl.jpg?t=19382299355"
+                                            class="" width="100%" height="100%"
+                                            alt="【美國BestVite】必賜力BCAA支鏈胺基膠囊4瓶組 (90顆*4瓶)">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="p-content">
+                                <div class="p-title">
+                                    <span class="p-title-text">
+                                        <a href="javascript:;">
+                                            買一送一【BLACK HAMMER】真空不鏽鋼保冰保溫冰壩杯 930ML(多色可選/陶瓷塗層/有提把/附粗吸管) </a>
+                                    </span>
+                                </div>
+                                <div class="p-count display-none">
+                                    <span class="p-count-style">
+                                        <span>剩餘:</span>
+                                        <span class="p-count__value">3</span>
+                                    </span>
+                                </div>
+                                <div class="p-price">
+                                    <span class="fz-14 font-color-gray-600 price-deprecated display-none">$629</span>
+                                    <div class="price__wrap">
+                                        <div class="price__final">
+                                            <span class="custom-price-style">
+                                                <span class="fz-12">$</span>
+                                                <span class="price__value">890</span>
+                                            </span>
+                                        </div>
+                                        <div class="price__discount-text fz-14 display-none">(售價已折)</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recommend__product width-col-33">
+                        <div class="product-card">
+                            <div class="thumbnail">
+                                <div class="aspect-ratio-content">
+                                    <a href="javascript:;">
+                                        <img src="https://media.etmall.com.tw/nximg/003614/3614504/3614504_xl.jpg?t=19382299355"
+                                            class="" width="100%" height="100%"
+                                            alt="【美國BestVite】必賜力BCAA支鏈胺基膠囊4瓶組 (90顆*4瓶)">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="p-content">
+                                <div class="p-title">
+                                    <span class="p-title-text">
+                                        <a href="javascript:;">
+                                            買一送一【BLACK HAMMER】真空不鏽鋼保冰保溫冰壩杯 930ML(多色可選/陶瓷塗層/有提把/附粗吸管) </a>
+                                    </span>
+                                </div>
+                                <div class="p-count display-none">
+                                    <span class="p-count-style">
+                                        <span>剩餘:</span>
+                                        <span class="p-count__value">3</span>
+                                    </span>
+                                </div>
+                                <div class="p-price">
+                                    <span class="fz-14 font-color-gray-600 price-deprecated display-none">$629</span>
+                                    <div class="price__wrap">
+                                        <div class="price__final">
+                                            <span class="custom-price-style">
+                                                <span class="fz-12">$</span>
+                                                <span class="price__value">890</span>
+                                            </span>
+                                        </div>
+                                        <div class="price__discount-text fz-14 display-none">(售價已折)</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recommend__product width-col-33">
+                        <div class="product-card">
+                            <div class="thumbnail">
+                                <div class="aspect-ratio-content">
+                                    <a href="javascript:;">
+                                        <img src="https://media.etmall.com.tw/nximg/003614/3614504/3614504_xl.jpg?t=19382299355"
+                                            class="" width="100%" height="100%"
+                                            alt="【美國BestVite】必賜力BCAA支鏈胺基膠囊4瓶組 (90顆*4瓶)">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="p-content">
+                                <div class="p-title">
+                                    <span class="p-title-text">
+                                        <a href="javascript:;">
+                                            買一送一【BLACK HAMMER】真空不鏽鋼保冰保溫冰壩杯 930ML(多色可選/陶瓷塗層/有提把/附粗吸管) </a>
+                                    </span>
+                                </div>
+                                <div class="p-count display-none">
+                                    <span class="p-count-style">
+                                        <span>剩餘:</span>
+                                        <span class="p-count__value">3</span>
+                                    </span>
+                                </div>
+                                <div class="p-price">
+                                    <span class="fz-14 font-color-gray-600 price-deprecated display-none">$629</span>
+                                    <div class="price__wrap">
+                                        <div class="price__final">
+                                            <span class="custom-price-style">
+                                                <span class="fz-12">$</span>
+                                                <span class="price__value">890</span>
+                                            </span>
+                                        </div>
+                                        <div class="price__discount-text fz-14 display-none">(售價已折)</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recommend__product width-col-33">
+                        <div class="product-card">
+                            <div class="thumbnail">
+                                <div class="aspect-ratio-content">
+                                    <a href="javascript:;">
+                                        <img src="https://media.etmall.com.tw/nximg/003614/3614504/3614504_xl.jpg?t=19382299355"
+                                            class="" width="100%" height="100%"
+                                            alt="【美國BestVite】必賜力BCAA支鏈胺基膠囊4瓶組 (90顆*4瓶)">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="p-content">
+                                <div class="p-title">
+                                    <span class="p-title-text">
+                                        <a href="javascript:;">
+                                            買一送一【BLACK HAMMER】真空不鏽鋼保冰保溫冰壩杯 930ML(多色可選/陶瓷塗層/有提把/附粗吸管) </a>
+                                    </span>
+                                </div>
+                                <div class="p-count display-none">
+                                    <span class="p-count-style">
+                                        <span>剩餘:</span>
+                                        <span class="p-count__value">3</span>
+                                    </span>
+                                </div>
+                                <div class="p-price">
+                                    <span class="fz-14 font-color-gray-600 price-deprecated display-none">$629</span>
+                                    <div class="price__wrap">
+                                        <div class="price__final">
+                                            <span class="custom-price-style">
+                                                <span class="fz-12">$</span>
+                                                <span class="price__value">890</span>
+                                            </span>
+                                        </div>
+                                        <div class="price__discount-text fz-14 display-none">(售價已折)</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ========== footer ========== -->
+    <div class="footer">
+        <span class="is-icon">
+            <svg width="24" height="24" viewBox="0 0 24
+                                    24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M22.75
+                                        9.26634C22.75 13.1915
+                                        19.3494
+                                        17.2814 12.6523 21.629L12.2537
+                                        21.8877L11.8495 21.6378C4.81906
+                                        17.2912
+                                        1.25
+                                        13.2032 1.25 9.26634C1.25 2.46067
+                                        8.73649
+                                        -0.217105 12.3156 4.97761C16.5483
+                                        -0.141899
+                                        22.75 2.36338 22.75 9.26634ZM21.25
+                                        9.26634C21.25 3.41961 16.2324
+                                        1.69095
+                                        12.8684 6.74832C12.5491 7.22834
+                                        11.8301
+                                        7.18363 11.5728 6.66775C9.06079
+                                        1.63251
+                                        2.75
+                                        3.56513 2.75 9.26634C2.75 12.4628
+                                        5.8776
+                                        16.1109 12.234 20.1098C18.2772
+                                        16.1153
+                                        21.25
+                                        12.4717 21.25 9.26634Z" span fill="#323232" />
+            </svg>
+        </span>
+        <span class="is-icon">
+            <svg width="24" height="24" viewBox="0 0
+                                        24
+                                        24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M22
+                                            5.75C22 7.82107 20.3211
+                                            9.5
+                                            18.25
+                                            9.5C16.9586 9.5 15.8196 8.84718
+                                            15.1451
+                                            7.85354L9.48783 11.1957C9.49589
+                                            11.2961
+                                            9.5 11.3976 9.5 11.5C9.5 11.7849
+                                            9.46823
+                                            12.0624 9.40803 12.3291C9.43291
+                                            12.3404
+                                            9.45743 12.3531 9.48148
+                                            12.3673L15.3712
+                                            15.8468C16.0591 15.0236 17.0934
+                                            14.5
+                                            18.25 14.5C20.3211 14.5 22
+                                            16.1789
+                                            22
+                                            18.25C22 20.3211 20.3211 22
+                                            18.25
+                                            22C16.1789 22 14.5 20.3211 14.5
+                                            18.25C14.5 17.8738 14.5554
+                                            17.5105
+                                            14.6585 17.1679L8.78753
+                                            13.6995C8.10605
+                                            14.639 6.99938 15.25 5.75
+                                            15.25C3.67893
+                                            15.25 2 13.5711 2 11.5C2 9.42893
+                                            3.67893
+                                            7.75 5.75 7.75C7.17422 7.75
+                                            8.41299
+                                            8.54396 9.04787 9.71341L14.5659
+                                            6.45353C14.5226 6.22565 14.5
+                                            5.99047
+                                            14.5 5.75C14.5 3.67893 16.1789 2
+                                            18.25
+                                            2C20.3211 2 22 3.67893 22
+                                            5.75ZM16
+                                            5.75C16 6.99264 17.0074 8 18.25
+                                            8C19.4926 8 20.5 6.99264 20.5
+                                            5.75C20.5
+                                            4.50736 19.4926 3.5 18.25
+                                            3.5C17.0074
+                                            3.5 16 4.50736 16 5.75ZM3.5
+                                            11.5C3.5
+                                            12.7426 4.50736 13.75 5.75
+                                            13.75C6.99264
+                                            13.75 8 12.7426 8 11.5C8 10.2574
+                                            6.99264
+                                            9.25 5.75 9.25C4.50736 9.25 3.5
+                                            10.2574
+                                            3.5 11.5ZM18.25 20.5C17.0074
+                                            20.5 16
+                                            19.4926 16 18.25C16 17.0074
+                                            17.0074
+                                            16
+                                            18.25 16C19.4926 16 20.5 17.0074
+                                            20.5
+                                            18.25C20.5 19.4926 19.4926 20.5
+                                            18.25
+                                            20.5Z" fill="#323232" />
+            </svg>
+        </span>
+        <ul class="button-group">
+            <li>加入購物車</li>
+            <li>立即購買</li>
+        </ul>
+    </div>
+    </div>
+</body>
+
+</html>
